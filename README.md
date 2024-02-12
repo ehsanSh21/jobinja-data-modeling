@@ -7,6 +7,8 @@ This project aims to analyze job market data collected from jobinja.ir using Pyt
 
 The project utilized Python along with SQLAlchemy and SQLite3 to scrape job market data from jobinja.ir, resulting in the collection of information on approximately 18000 job listings across the country.
 
+Link of the code(i did some small changes to the code for this project): https://github.com/ehsanSh21/jobinja_web_scraping
+
 #### Steps Taken
 1. **Web Scraping Process**: Employed Python scripts to scrape job data from jobinja.ir.
 2. **Data Collection**: Gathered job information, including title, company, skills, category, and salary (where available).
