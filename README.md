@@ -90,6 +90,9 @@ Power BI was employed to visualize and analyze the collected job market data, pr
 </p>
 
 - **Average Salary vs. Job Count**: Visualization depicting the average salary for the top 10 categories based on job count and estimated salary.
+  
+    <img src="https://github.com/ehsanSh21/jobinja-data-modeling/blob/main/avg_estimated.png" width="650" height="400"> 
+  
 - **Top 10 Skills for Specific Category**: Visualization illustrating the top 10 skills requested for specific job categories, with a slicer for category selection.
 - **Salary Increase by Experience Years**: Dynamic line chart demonstrating salary increase trends based on experience years for selected categories and provinces.
 
