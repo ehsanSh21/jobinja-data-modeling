@@ -14,11 +14,7 @@ The project utilized Python along with SQLAlchemy and SQLite3 to scrape job mark
 
 ### Data Preprocessing
 
-To address the issue of a significant portion of job listings lacking salary information, an estimation method was devised to approximate salaries based on experience years, job category, and province.
-
-#### Methodology
-1. **Salary Estimation**: Estimated salaries for jobs with no specified value by analyzing experience years, job category, and province.
-2. **Data Augmentation**: Introduced a new column named "estimated_salary" to incorporate the estimated salary values into the dataset.
+To handle missing salary values, I estimated salaries for approximately 60% of job listings based on experience years, category, and province using SQL queries. The estimated salary was added as a new column named estimated_salary in the SQLite3 database.
 
 ### Data Model
 The data model represents the schema used for storing job market data in the SQLite3 database. It consists of four main entities: Jobs, Skills, Companies, and Job_Skills, with defined relationships between them.
