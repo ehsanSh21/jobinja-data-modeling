@@ -94,6 +94,9 @@ Power BI was employed to visualize and analyze the collected job market data, pr
     <img src="https://github.com/ehsanSh21/jobinja-data-modeling/blob/main/avg_estimated.png" width="650" height="400"> 
   
 - **Top 10 Skills for Specific Category**: Visualization illustrating the top 10 skills requested for specific job categories, with a slicer for category selection.
+<img src="https://github.com/ehsanSh21/jobinja-data-modeling/blob/main/skill_cat.png" width="750" height="400">
+<img src="https://github.com/ehsanSh21/jobinja-data-modeling/blob/main/skill_cat_pro.png" width="750" height="400"> 
+
 - **Salary Increase by Experience Years**: Dynamic line chart demonstrating salary increase trends based on experience years for selected categories and provinces.
 
 ### Conclusion
