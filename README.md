@@ -1,7 +1,7 @@
 # Analyzing Job Market Data in Power BI
 
 ### Project Overview
-This project aims to analyze the job market data obtained from jobinja.ir using web scraping techniques and visualize the insights using Power BI.
+This project aims to analyze job market data collected from jobinja.ir using Python web scraping techniques and visualize insights using Power BI. The analysis includes salary trends, skill requirements, and job distribution across different categories and provinces.
 
 ### Web Scraping
 
