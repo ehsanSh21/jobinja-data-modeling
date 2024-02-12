@@ -15,6 +15,58 @@ The project utilized Python along with SQLAlchemy and SQLite3 to scrape job mark
 ### Data Preprocessing
 
 To handle missing salary values, I estimated salaries for approximately 60% of job listings based on experience years, category, and province using SQL queries. The estimated salary was added as a new column named estimated_salary in the SQLite3 database.
+##### SQL query: 
+```sql
+WITH numbered_jobs AS (
+    SELECT
+        id,
+        category,
+        experience_years_min,
+        experience_years_max,
+        salary_min,
+        province,
+        CASE
+            WHEN experience_years_min = 0 AND experience_years_max = 0 THEN 1
+            WHEN experience_years_min = 0 AND experience_years_max = 3 THEN 2
+            WHEN experience_years_min = 3 AND experience_years_max = 6 THEN 3
+            WHEN experience_years_min = 6 AND experience_years_max = 0 THEN 4
+        END AS row_number
+    FROM
+        jobs
+),
+calc_new_salary AS (
+    SELECT
+        nj.*,
+        CASE
+            WHEN nj.salary_min = "توافقی" THEN
+                (SELECT SUM(salary_min) / COUNT(CASE WHEN t2.salary_min != "توافقی" THEN 1 END)
+                 FROM numbered_jobs t2
+                 WHERE nj.category = t2.category
+                 AND nj.experience_years_min = t2.experience_years_min
+                 AND nj.experience_years_max = t2.experience_years_max
+                 and nj.province = t2.province
+                 )
+            ELSE nj.salary_min
+        END AS new_salary
+    FROM
+        numbered_jobs nj
+    ORDER BY
+        nj.experience_years_min, nj.experience_years_max
+)
+SELECT
+    *,
+    (CASE when t3.new_salary is NULL then
+        (SELECT AVG(t4.new_salary)
+     FROM calc_new_salary t4
+     WHERE t3.category = t4.category
+     and t3.province=t4.province
+     )
+        when t3.new_salary is not null then t3.new_salary
+        end ) as estimated_salary
+FROM
+    calc_new_salary t3
+;
+```
 
 ### Data Model
 The data model represents the schema used for storing job market data in the SQLite3 database. It consists of four main entities: Jobs, Skills, Companies, and Job_Skills, with defined relationships between them.
