@@ -83,7 +83,12 @@ The data model represents the schema used for storing job market data in the SQL
 Power BI was employed to visualize and analyze the collected job market data, providing interactive and insightful visualizations.
 
 #### Visualizations
-- **Average Salary by Top 10 Categories**: Dynamic visualization showcasing the average salary for the top 10 categories, with a slicer for selecting specific provinces.
+- **Average Salary by Top 10 Categories**: Dynamic visualization showcasing the average salary for the top 10 categories, with a slicer for selecting specific provinces( determined salary).
+<p float="left">
+  <img src="https://github.com/ehsanSh21/jobinja-data-modeling/blob/main/avg_salary.png" alt="Database Diagram" width="450" height="350">
+ <img src="https://github.com/ehsanSh21/jobinja-data-modeling/blob/main/avg_province.png" width="450" height="350"> 
+</p>
+
 - **Average Salary vs. Job Count**: Visualization depicting the average salary for the top 10 categories based on job count and estimated salary.
 - **Top 10 Skills for Specific Category**: Visualization illustrating the top 10 skills requested for specific job categories, with a slicer for category selection.
 - **Salary Increase by Experience Years**: Dynamic line chart demonstrating salary increase trends based on experience years for selected categories and provinces.
