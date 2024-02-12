@@ -9,7 +9,7 @@ The project utilized Python along with SQLAlchemy and SQLite3 to scrape job mark
 
 #### Steps Taken
 1. **Web Scraping Process**: Employed Python scripts to scrape job data from jobinja.ir.
-2. **Data Collection**: Gathered job information, including title, company ID, category, and salary (where available).
+2. **Data Collection**: Gathered job information, including title, company, skills, category, and salary (where available).
 3. **Data Storage**: Utilized SQLite3 database with SQLAlchemy ORM for efficient data storage.
 
 ### Data Preprocessing
