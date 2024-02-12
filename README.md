@@ -73,7 +73,9 @@ FROM
 ### Data Model
 The data model represents the schema used for storing job market data in the SQLite3 database. It consists of four main entities: Jobs, Skills, Companies, and Job_Skills, with defined relationships between them.
 #### Diagram
-[Insert Data Model Diagram Here]
+
+<img src="https://github.com/ehsanSh21/jobinja-data-modeling/blob/master/data%20model.png" alt="Database Diagram" width="700" height="800">
+
 
 ### Data Visualization with Power BI
 #### Overview
